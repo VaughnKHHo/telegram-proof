@@ -74,22 +74,22 @@ class Proof:
             self.proof_response.uniqueness = 0.0
             self.proof_response.quality = 0.0
             self.proof_response.valid = False
-            self.proof_response.attributes = {
-                'proof_valid': False,
-                'proof_failed_reason': 'we are testing this for the frontend - extract this',
-                'did_score_content': False,
-                'source': source_data.source.name,
-                'revision': data_revision,
-                'submitted_on': current_datetime
-            }
             # self.proof_response.attributes = {
-            #     'score': 7,
-            #     'did_score_content': True,
-            #     'source': 'vaughn telegram',
+            #     'proof_valid': False,
+            #     'proof_failed_reason': 'we are testing this for the frontend - extract this',
+            #     'did_score_content': False,
+            #     'source': source_data.source.name,
             #     'revision': data_revision,
             #     'submitted_on': current_datetime
-            #     #'chat_data': None #RL: No longer generate usesful data...
             # }
+            self.proof_response.attributes = {
+                'score': 7,
+                'did_score_content': True,
+                'source': 'vaughn telegram',
+                'revision': data_revision,
+                'submitted_on': current_datetime
+                #'chat_data': None #RL: No longer generate usesful data...
+            }
             self.proof_response.metadata = metadata
             logging.info(f"ProofResponseAttributes: {json.dumps(self.proof_response.attributes, indent=2)}")
             return self.proof_response
