@@ -45,11 +45,13 @@ class Proof:
             self.config,
             source_data
         )
-        is_data_authentic = verify_result
-        if is_data_authentic:
-            print(f"verify_result: {verify_result}")
-            is_data_authentic = verify_result.is_valid
-            proof_failed_reason = verify_result.error_text
+        # is_data_authentic = verify_result
+        # if is_data_authentic:
+        #     print(f"verify_result: {verify_result}")
+        #     is_data_authentic = verify_result.is_valid
+        #     proof_failed_reason = verify_result.error_text
+
+        is_data_authentic = False
 
         cargo_data = CargoData(
             source_data = source_data,
