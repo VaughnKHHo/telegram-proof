@@ -41,10 +41,10 @@ class Proof:
         )
         source_data.submission_by = source_user_hash_64
         proof_failed_reason = ""
-        verify_result = verify_token(
-            self.config,
-            source_data
-        )
+        # verify_result = verify_token(
+        #     self.config,
+        #     source_data
+        # )
         # is_data_authentic = verify_result
         # if is_data_authentic:
         #     print(f"verify_result: {verify_result}")
